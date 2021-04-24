@@ -5,17 +5,17 @@ const express = require('express')
 const config = require('config')
 const path = require('path')
 
-const RssParser = require('./utils/rssparser')
-const MailBuilder = require('./utils/mailbuilder')
-const MailSender = require('./utils/mailsender')
+const RssParser = require('./src/utils/rssparser')
+const MailBuilder = require('./src/utils/mailbuilder')
+const MailSender = require('./src/utils/mailsender')
 
-const Database = require('./storage/database')
+const Database = require('./src/storage/database')
 
-const UserController = require('./controllers/usercontroller')
-const MailController = require('./controllers/mailcontroller')
+const UserController = require('./src/controllers/usercontroller')
+const MailController = require('./src/controllers/mailcontroller')
 
-const userRoutes = require('./routes/userroutes')
-const mailRoutes = require('./routes/mailroutes')
+const userRoutes = require('./src/routes/userroutes')
+const mailRoutes = require('./src/routes/mailroutes')
 
 const dbConfig = config.get('feedmail.db')
 const senderConfig = config.get('feedmail.mailgun')
